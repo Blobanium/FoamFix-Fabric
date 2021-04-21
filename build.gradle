@@ -1,6 +1,5 @@
 plugins {
 	id 'fabric-loom' version '0.7-SNAPSHOT'
-	id 'net.minecrell.licenser' version '0.4.1'
 }
 
 sourceCompatibility = 1.8
@@ -15,20 +14,6 @@ minecraft {
 dependencies {
 	minecraft "com.mojang:minecraft:1.14"
 	mappings "net.fabricmc:yarn:1.14+build.3"
-	modCompile "net.fabricmc:fabric-loader:0.11.3"
-}
-
-license {
-	sourceSets = [project.sourceSets.main]
-	header = project.file("docs/licenses/COPYING")
-	ignoreFailures = true
-	exclude '**/*.lang'
-	exclude '**/*.info'
-	exclude '**/*.mcmeta'
-
-	matching('**/pl/asie/foamfix/api/**') {
-		header = project.file("docs/licenses/LICENSE-API")
-	}
 	modImplementation "net.fabricmc:fabric-loader:0.11.3"
 }
 
